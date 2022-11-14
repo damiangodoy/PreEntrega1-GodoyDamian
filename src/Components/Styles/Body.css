@@ -1,0 +1,17 @@
+/* BODY */
+
+.wrap {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-image: url("../../Pic/foto_inicio.jpg");
+    background-size:100%;
+  }
+  
+  .wrap_texto {
+  
+    margin-left: 20px;
+  }
+  

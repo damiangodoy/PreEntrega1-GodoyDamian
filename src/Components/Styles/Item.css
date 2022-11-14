@@ -1,0 +1,19 @@
+.cardPadre {
+    width: 18rem; 
+    float:left; 
+    margin:15px;
+    justify-content:center ;
+    align-items:center;
+    cursor:pointer;
+    box-Shadow:0px 1px 10px rgba(0,0,0,0.2);
+    transition: all 400ms ease;
+}
+
+.cardPadre:hover{
+    box-Shadow:5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-3%);
+}
+
+.DivContenedorTotal{
+    text-align: center;
+}
