@@ -115,6 +115,7 @@ export const data  = [
     talles:'Talles: Xl - L - M - S',
     Img:"https://imageshack.com/i/pmvrE9pMj",
     price:11500, 
+    stock:20,
     temporada:'Invierno',
     category:2,
     },

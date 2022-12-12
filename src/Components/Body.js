@@ -7,8 +7,8 @@ const Body = ()  => {
         <div class="wrap">
             <div className="foto_Inicio">
                 <div class="wrap_texto">
-                <h2>YOUR AESTHETIC</h2>
-                <p><i>your home</i></p>
+                <h2>AESTHETIC-HOME</h2>
+                <p><i>Tu ropa tu hogar...</i></p>
                 </div>
             </div>
         </div>

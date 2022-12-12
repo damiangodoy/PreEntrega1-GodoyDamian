@@ -1,15 +1,13 @@
-import { useState } from 'react';
+import {useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import "./Styles/ItemCount.css"
 
 
-const ItemCount = () => {
+const ItemCount = ({stock = 0,initial = 1,onAdd}) => {
     const [rate,setRate] = useState(0);
-    const stockMaximo = 10;
-    const stockMinimo = 0;
-    
+
     const rateProducto = () => {
-      if(rate >= stockMaximo){
+      if(rate >= stock){
       alert("No hay mas stock")
       } else{
         setRate(rate + 1)
@@ -17,12 +15,14 @@ const ItemCount = () => {
     }
     
     const restProducto = () => {
-      if(rate <= stockMinimo){
-       alert("Error,seleccione al menos 1 prenda") 
+      if(rate <= initial + 1){
+       alert("Error, no se pueden elegir 0 prendas") 
       }else{
         setRate(rate - 1)
       }
     }
+
+    
 
 return (
     <>
@@ -30,7 +30,11 @@ return (
     <span>Cantidad: {rate} </span> 
     <br></br> 
     <Button className='Button_mas' variant="outline-dark" onClick={rateProducto}>+</Button> | <Button className='Button_menos' variant="outline-dark" onClick={restProducto}>-</Button>
-    <Button className='Button_Count' variant="info">Agregar al carrito</Button>
+    {
+      stock && rate
+      ? <Button variant="info" onClick={() => onAdd(rate)}>Agregar al Carrito</Button>
+      : <Button variant="info">Agregar al Carrito</Button>
+    }
     </div>    
     </>
   );

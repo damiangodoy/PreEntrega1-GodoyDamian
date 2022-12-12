@@ -1,9 +1,8 @@
 import {useEffect, useState} from 'react'
-import {data} from '../utils/data'
-import {customFetch} from '../utils/customFetch'
 import ItemDetail from './ItemDetail'
 import "./Styles/ItemDetailContainer.css"
 import { useParams } from 'react-router-dom'
+import {firestoreFetchOne} from "../utils/firestoreFetch";
 
 const ItemDetailContainer = (props) => {
     const [dato,setDato] = useState({})
@@ -11,11 +10,11 @@ const ItemDetailContainer = (props) => {
 
     //componentDidMount
     useEffect(() => {
-        customFetch(2000,data)
-        .then(response => setDato(response.find((item)=> item.id === Number(IdItem))))
-        .catch(err => console.log(err))
-    },[IdItem])
-    
+        firestoreFetchOne(IdItem)
+            .then(result => setDato(result))
+            .catch(err => console.log(err))
+    }, [IdItem]);
+
     return(
     <>
     <div>

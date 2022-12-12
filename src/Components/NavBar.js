@@ -7,10 +7,11 @@ import {Link} from 'react-router-dom';
 
 
 function NavBar(props) {
+  
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand as={Link} to='/'><b><i>AESTHETIC</i></b></Navbar.Brand>
+        <Navbar.Brand as={Link} to='/'><b><i>AESTHETIC HOME</i></b></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

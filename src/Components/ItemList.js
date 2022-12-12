@@ -4,10 +4,11 @@ import Item from "./Item";
 const ItemList = ({datos}) => {
 
 
-  return (
-    <>
-    {
-    datos.map((data) => 
+return (
+  <>
+  {
+    datos.length > 0
+  ? datos.map((data) => 
     <Item 
     key={data.id} 
     title={data.title} 
@@ -16,10 +17,12 @@ const ItemList = ({datos}) => {
     Img={data.Img}
     price={data.price}
     id={data.id}
+    stock={data.stock}
     />)
-    }
-    </>
-  );
+  : <p>...Cargando</p>  
+  }
+  </>
+);
 }
 
 export default ItemList;
